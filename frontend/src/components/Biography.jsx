@@ -11,23 +11,10 @@ const Biography = ({imageUrl}) => {
           <p>Biography</p>
           <h3>Who We Are</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            blanditiis sequi aperiam. Debitis fugiat harum ex maxime illo
-            consequatur mollitia voluptatem omnis nihil nesciunt beatae esse
-            ipsam, sapiente totam aspernatur porro ducimus aperiam nisi. Ex
-            magnam voluptatum consectetur reprehenderit fugiat recusandae aut
-            similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
-            nesciunt laboriosam totam iusto!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt architecto culpa eaque exercitationem omnis tempora quibusdam! Sapiente porro alias doloremque iste delectus omnis, tempora in cumque commodi, atque aliquam, magni veniam pariatur! Commodi minus quibusdam fuga adipisci deserunt nostrum ipsam.
           </p>
-          <p>We are all in 2024!</p>
-          <p>We are working on a MERN STACK PROJECT.</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto veniam saepe fugiat! Esse ex veritatis voluptatibus ab libero, quo est? Pariatur vitae, recusandae corrupti mollitia amet quod rem quis delectus nobis tenetur ratione deleniti illo quisquam, aspernatur unde consequuntur neque?
           </p>
           <p>Lorem ipsum dolor sit amet!</p>
           <p>Coding is fun!</p>

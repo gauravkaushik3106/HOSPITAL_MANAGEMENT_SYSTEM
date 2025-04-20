@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Mongoose } from "mongoose";
+// import { Mongoose } from "mongoose";
 import validator from "validator";
 
 const appointmentSchema = new mongoose.Schema({
@@ -10,7 +10,7 @@ const appointmentSchema = new mongoose.Schema({
   },
   lastName: {
     type: String,
-    required: [true, "Last Name Is Required!"],
+    // required: [true, "Last Name Is Required!"],
     minLength: [3, "Last Name Must Contain At Least 3 Characters!"],
   },
   email: {
@@ -21,14 +21,14 @@ const appointmentSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: [true, "Phone Is Required!"],
-    minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
-    maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
+    minLength: [10, "Phone Number Must Contain Exact 10 Digits!"],
+    maxLength: [10, "Phone Number Must Contain Exact 10 Digits!"],
   },
-  nic: {
+  aadharNumber: {
     type: String,
-    required: [true, "NIC Is Required!"],
-    minLength: [13, "NIC Must Contain Only 13 Digits!"],
-    maxLength: [13, "NIC Must Contain Only 13 Digits!"],
+    required: [true, "aadharNumber Is Required!"],
+    minLength: [12, "aadharNumber Must Contain Only 12 Digits!"],
+    maxLength: [12, "aadharNumber Must Contain Only 12 Digits!"],
   },
   dob: {
     type: Date,
@@ -67,7 +67,7 @@ const appointmentSchema = new mongoose.Schema({
   },
   doctorId: {
     type: mongoose.Schema.ObjectId,
-    required: [true, "Doctor Id Is Invalid!"],
+    required: [true, "Doctor Id Is Required!"],
   },
   patientId: {
     type: mongoose.Schema.ObjectId,

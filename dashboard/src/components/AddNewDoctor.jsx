@@ -11,7 +11,7 @@ const AddNewDoctor = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [nic, setNic] = useState("");
+  const [aadharNumber, setaadharNumber] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
@@ -52,13 +52,13 @@ const AddNewDoctor = () => {
       formData.append("email", email);
       formData.append("phone", phone);
       formData.append("password", password);
-      formData.append("nic", nic);
+      formData.append("aadharNumber", aadharNumber);
       formData.append("dob", dob);
       formData.append("gender", gender);
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
       await axios
-        .post("http://localhost:5000/api/v1/user/doctor/addnew", formData, {
+        .post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
@@ -70,7 +70,7 @@ const AddNewDoctor = () => {
           setLastName("");
           setEmail("");
           setPhone("");
-          setNic("");
+          setaadharNumber("");
           setDob("");
           setGender("");
           setPassword("");
@@ -126,9 +126,9 @@ const AddNewDoctor = () => {
               />
               <input
                 type="number"
-                placeholder="NIC"
-                value={nic}
-                onChange={(e) => setNic(e.target.value)}
+                placeholder="aadharNumber"
+                value={aadharNumber}
+                onChange={(e) => setaadharNumber(e.target.value)}
               />
               <input
                 type={"date"}

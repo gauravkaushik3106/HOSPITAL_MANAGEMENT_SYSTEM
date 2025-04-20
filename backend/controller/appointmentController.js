@@ -9,7 +9,7 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    aadharNumber,
     dob,
     gender,
     appointment_date,
@@ -24,7 +24,7 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     !lastName ||
     !email ||
     !phone ||
-    !nic ||
+    !aadharNumber ||
     !dob ||
     !gender ||
     !appointment_date ||
@@ -42,7 +42,7 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     doctorDepartment: department,
   });
   if (isConflict.length === 0) {
-    return next(new ErrorHandler("Doctor not found", 404));
+    return next(new ErrorHandler("Doctor not found 0", 404));
   }
 
   if (isConflict.length > 1) {
@@ -60,7 +60,7 @@ export const postAppointment = catchAsyncErrors(async (req, res, next) => {
     lastName,
     email,
     phone,
-    nic,
+    aadharNumber,
     dob,
     gender,
     appointment_date,

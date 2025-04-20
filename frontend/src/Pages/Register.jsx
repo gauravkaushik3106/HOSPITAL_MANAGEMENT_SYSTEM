@@ -11,7 +11,7 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [nic, setNic] = useState("");
+  const [aadharNumber, setaadharNumber] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
@@ -23,8 +23,8 @@ const Register = () => {
     try {
       await axios
         .post(
-          "http://localhost:5000/api/v1/user/patient/register",
-          { firstName, lastName, email, phone, nic, dob, gender, password },
+          "http://localhost:4000/api/v1/user/patient/register",
+          { firstName, lastName, email, phone, aadharNumber, dob, gender, password },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
@@ -38,7 +38,7 @@ const Register = () => {
           setLastName("");
           setEmail("");
           setPhone("");
-          setNic("");
+          setaadharNumber("");
           setDob("");
           setGender("");
           setPassword("");
@@ -93,9 +93,9 @@ const Register = () => {
           <div>
             <input
               type="number"
-              placeholder="NIC"
-              value={nic}
-              onChange={(e) => setNic(e.target.value)}
+              placeholder="aadharNumber"
+              value={aadharNumber}
+              onChange={(e) => setaadharNumber(e.target.value)}
             />
             <input
               type={"date"}
@@ -126,7 +126,7 @@ const Register = () => {
           >
             <p style={{ marginBottom: 0 }}>Already Registered?</p>
             <Link
-              to={"/signin"}
+              to={"/login"}
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Login Now

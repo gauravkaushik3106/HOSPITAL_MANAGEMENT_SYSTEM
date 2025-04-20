@@ -13,7 +13,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/v1/appointment/getall",
+          "http://localhost:4000/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -27,7 +27,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/v1/appointment/update/${appointmentId}`,
+        `http://localhost:4000/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );
@@ -64,15 +64,13 @@ const Dashboard = () => {
                 </h5>
               </div>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facilis, nam molestias. Eaque molestiae ipsam commodi neque.
-                Assumenda repellendus necessitatibus itaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ea inventore rerum ut, consectetur itaque ex perferendis praesentium neque sapiente fugiat. Illo necessitatibus cumque esse!
               </p>
             </div>
           </div>
           <div className="secondBox">
             <p>Total Appointments</p>
-            <h3>1500</h3>
+            <h3>1000</h3>
           </div>
           <div className="thirdBox">
             <p>Registered Doctors</p>
@@ -128,10 +126,15 @@ const Dashboard = () => {
                       <td>{appointment.hasVisited === true ? <GoCheckCircleFill className="green"/> : <AiFillCloseCircle className="red"/>}</td>
                     </tr>
                   ))
-                : "No Appointments Found!"}
+                : (
+                  <tr>
+                    <td colSpan="6" style={{ textAlign: "center" }}>
+                      No Appointments Found!
+                    </td>
+                  </tr>
+                )}
             </tbody>
           </table>
-
           {}
         </div>
       </section>

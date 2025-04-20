@@ -11,7 +11,7 @@ const Doctors = () => {
     const fetchDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5000/api/v1/user/doctors",
+          "http://localhost:4000/api/v1/user/doctors",
           { withCredentials: true }
         );
         setDoctors(data.doctors);
@@ -40,22 +40,22 @@ const Doctors = () => {
                 <h4>{`${element.firstName} ${element.lastName}`}</h4>
                 <div className="details">
                   <p>
-                    Email: <span>{element.email}</span>
+                    Email : <span>{element.email}</span>
                   </p>
                   <p>
-                    Phone: <span>{element.phone}</span>
+                    Phone : <span>{element.phone}</span>
                   </p>
                   <p>
-                    DOB: <span>{element.dob.substring(0, 10)}</span>
+                    DOB : <span>{element.dob.substring(0, 10)}</span>
                   </p>
                   <p>
-                    Department: <span>{element.doctorDepartment}</span>
+                    Department : <span>{element.doctorDepartment}</span>
                   </p>
                   <p>
-                    NIC: <span>{element.nic}</span>
+                    Aadhar : <span>{element.aadharNumber}</span>
                   </p>
                   <p>
-                    Gender: <span>{element.gender}</span>
+                    Gender : <span>{element.gender}</span>
                   </p>
                 </div>
               </div>
